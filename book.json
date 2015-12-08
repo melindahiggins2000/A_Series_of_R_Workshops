@@ -1,1 +1,10 @@
-{}
+{
+    "gitbook": "2.x.x",
+    "plugins": [],
+    "links": {
+        "sidebar": {
+            "Author's Website": "http://melindahiggins2000.github.io/web2/"
+        }
+    },
+    "pluginsConfig": {}
+}
