@@ -1,6 +1,9 @@
 {
     "gitbook": "2.x.x",
     "plugins": [],
+    "styles": {
+        "website": styles/cerulean.css
+    },
     "links": {
         "sidebar": {
             "Author's Website": "http://melindahiggins2000.github.io/web2/"
