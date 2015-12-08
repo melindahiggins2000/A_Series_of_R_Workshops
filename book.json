@@ -2,7 +2,7 @@
     "gitbook": "2.x.x",
     "plugins": [],
     "styles": {
-        "website": styles/cerulean.css
+        "website": "styles/cerulean.css"
     },
     "links": {
         "sidebar": {
