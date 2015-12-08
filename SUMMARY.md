@@ -10,3 +10,4 @@ This is the summary of my book.
     * [example 1](workshop3/example1.md)
 * [Workshop 4](workshop4/README.md)
     * [example 1](workshop4/example1.md)
+* [References](references.md)
