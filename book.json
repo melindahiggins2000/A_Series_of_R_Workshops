@@ -1,8 +1,8 @@
 {
     "gitbook": "2.x.x",
-    "plugins": [],
+    "plugins": ["advanced-emoji"],
     "styles": {
-        "website": "styles/cerulean.css"
+        "website": "styles/readable.css"
     },
     "links": {
         "sidebar": {
