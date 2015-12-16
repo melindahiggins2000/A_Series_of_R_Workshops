@@ -1,23 +1,5 @@
 
-# How to Install R
-
-### Download the software
-
-1. Getting the Software  more at https://cran.r-project.org/ 
-2. downloading and installing R [first box on CRAN homepage]
-    + for Windows  https://cran.r-project.org/bin/windows/  click on the link for "BASE" and then 
-download the current version of R. I would suggest installing the 64-bit version as appropriate 
-for your operating system.
-    + for Mac  https://cran.r-project.org/bin/macosx/  read through the specifics to see which 
-package (PKG) is best for your operating system version.
-
-
-
-
-
-
-
-***
+# example 2
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
