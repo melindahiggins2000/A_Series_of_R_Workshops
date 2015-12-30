@@ -1,7 +1,7 @@
 # A Series of R Workshops
 #### by Melinda Higgins, Ph.D.
 
-![Title Img](titleTest2.jpg)
+![Title Img](titleTest3.jpg)
 
 This "book" is the assembly of the materials compiled for the "Series of R Workshops" held Spring 2016 at Emory University - School of Nursing. These workshops were led by Melinda Higgins, Ph.D., associate research professor and senior biostatistician.
 
