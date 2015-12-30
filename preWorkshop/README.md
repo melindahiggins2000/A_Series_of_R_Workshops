@@ -4,7 +4,10 @@ The following sections will go through the steps and weblinks for installing R a
 
 * Pre Workshop Sections
     * [Information on R](./Rinfo.html)
+         + This section provides links and additional information on The R Project, R Foundation, R documentation, and other sources of information on R.
     * [Installing R](./Rinstall.html)
+        + This section provides links and information to download R and get it up and running on your computer.
     * [Installing RStudio](./RStudioInstall.html)
+        + This section provides links and information to download RStudio and get it up and running on your computer.
 
 

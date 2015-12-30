@@ -7,20 +7,10 @@ opts_chunk$set(prompt=TRUE, comment='', results='markup')
 
 # end setup chunk
 ```
-# example 2
+# Installing RStudio
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Download and install software
+* NOTE: Be sure you to install R BEFORE you install RStudio
+* RStudio can be downloaded from their [products webpages](https://www.rstudio.com/products/RStudio/). RStudio is an integrated development environment (IDE) for R.
+* Be sure to download and install the [desktop version](https://www.rstudio.com/products/rstudio/download/) for your operating system. Use one of the 1st 2 links for the "Installers" for either Windows or Mac.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
