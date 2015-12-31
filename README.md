@@ -5,7 +5,11 @@
 
 This "book" is the assembly of the materials compiled for the "Series of R Workshops" held Spring 2016 at Emory University - School of Nursing. These workshops were led by Melinda Higgins, Ph.D., associate research professor and senior biostatistician.
 
-The Series for Spring 2016 is currently planned to have 4 workshops - each 2 hours long with a focus on hands-on learning using R and RStudio. These workshops will be introductory and provide the skills necessary to begin to be comfortable working with R and RStudio performing data analysis and writing research reports.
+The Series for Spring 2016 is currently planned to have 4 workshops - each 2 hours long with a focus on hands-on learning using R and RStudio. These workshops will be introductory and provide skills necessary to begin to be comfortable working with R and RStudio performing data analysis and writing research reports. R is a wonderful programming language for Data Analysis, Graphics and much more. 
+
+> "However, with great power comes great responsibility!"
+
+R has a steep learning curve. It was not designed to have a point-and-click menu driven interface with canned procedures. Instead it is a rich language for data manipulation and analysis with statistical functions and methods embedded in it's core. The rewards are definitely worth the effort. PLUS, IT IS FREE and is supported by literally hundreds of thousands of users and developers worldwide. No other widely-used software can make these claims. 
 
 *** 
 
