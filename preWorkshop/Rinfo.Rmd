@@ -28,7 +28,7 @@ The "Comprehensive R Archive Network"" or CRAN is the site for obtaining the R s
 * [FAQs](https://cran.r-project.org/faqs.html)
 
 
-### The R Journal, Books and Other Resources
+### Journals, Books and Other Resources
 
 There are literally thousands of sites around the world providing information, tips, help, and insights into programming, statistics and data analysis with R. The links below are just a few to get you started.
 

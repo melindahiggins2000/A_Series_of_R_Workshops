@@ -22,7 +22,7 @@ This series of workshops will not teach you everything you need to know about R.
 * [UCLA Institute for Digital Research and Education (IDRE)](http://www.ats.ucla.edu/stat/r/)
     + The IDRE by UCLA is an excellent source for help with many statistical software pages and analyses including R.
 * [SWIRL](http://swirlstats.com/)
-    + `swirl` is actually an R package you install from with R. `swirl` teaches you R programming and data science interactively, at your own pace, and right in the R console!
+    + `swirl` is actually an R package you install from within R. `swirl` teaches you R programming and data science interactively, at your own pace, and right in the R console!
 * [Quick-R](http://www.statmethods.net/index.html)
     + This is an excellent site for quick help and resources for using R and statistical analyses in general. The site is owned and maintained by Rob Kabacoff, who also authored the very good book "R in Action".
 
