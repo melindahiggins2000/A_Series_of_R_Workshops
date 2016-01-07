@@ -4,7 +4,14 @@ opts_chunk$set(prompt=TRUE, comment='', results='markup')
 # See yihui.name/knitr/options for more Knitr options.
 ##### Put other setup R code here
 
-
 # end setup chunk
 ```
 # example 1
+
+Try one more `r citep("10.1016/j.ecolecon.2004.06.015")`.
+
+and NOTE a usual citation [@wickham2015devtools] for Hadley Wickham's `devtools` does not work here. BUT this does using `citep` and the assigned bibliography `bib` object; the code `citep(bib["wickham2015devtools"])` generates this `r citep(bib["wickham2015devtools"])`.
+
+
+
+

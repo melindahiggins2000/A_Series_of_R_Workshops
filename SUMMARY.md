@@ -15,5 +15,5 @@ This "book" is summarized as follows: This "book" is the assembly of the materia
     * [in development - placeholder](workshop3/example1.md)
 * [Workshop 4](workshop4/README.md)
     * [in development - placeholder](workshop4/example1.md)
-* [References](references.md)
 * [miscellaneous](misc/README.md)
+* [References](references.md)

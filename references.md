@@ -1,18 +1,27 @@
 # References
 
 
-[1] C. Boettiger. _knitcitations: Citations for 'Knitr' Markdown
-Files_. R package version 1.0.7. 2015. <URL:
-http://CRAN.R-project.org/package=knitcitations>.
+[1] A. M. Fitzpatrick, M. Higgins, F. Holguin, et al. "The
+molecular phenotype of severe asthma in children". In: _Journal of
+Allergy and Clinical Immunology_ 125.4 (Apr. 2010), pp.
+851-857.e18. DOI: 10.1016/j.jaci.2010.01.048. <URL:
+http://dx.doi.org/10.1016/j.jaci.2010.01.048>.
 
-[2] S. P. é and aron O'Mullan. _Gitbook: Build beautiful
-interactive books using GitHub/Git and Markdown_. 2014. <URL:
-http://www.gitbook.io/>.
+[2] V. Michopoulos, M. Higgins, D. Toufexis, et al. "Social
+subordination produces distinct stress-related phenotypes in
+female rhesus monkeys". In: _Psychoneuroendocrinology_ 37.7 (Jul.
+2012), pp. 1071-1085. DOI: 10.1016/j.psyneuen.2011.12.004. <URL:
+http://dx.doi.org/10.1016/j.psyneuen.2011.12.004>.
 
-[3] H. Wickham and W. Chang. _devtools: Tools to Make Developing R
+[3] K. Rehdanz and D. Maddison. "Climate and happiness". In:
+_Ecological Economics_ 52.1 (Jan. 2005), pp. 111-125. DOI:
+10.1016/j.ecolecon.2004.06.015. <URL:
+http://dx.doi.org/10.1016/j.ecolecon.2004.06.015>.
+
+[4] D. Temple Lang and t. C. team. _RCurl: General Network
+(HTTP/FTP/...) Client Interface for R_. R package version
+1.95-4.7. 2015. <URL: http://CRAN.R-project.org/package=RCurl>.
+
+[5] H. Wickham and W. Chang. _devtools: Tools to Make Developing R
 Packages Easier_. R package version 1.9.1. 2015. <URL:
 http://CRAN.R-project.org/package=devtools>.
-
-[4] Y. Xie. _knitr: A General-Purpose Package for Dynamic Report
-Generation in R_. R package version 1.11. 2015. <URL:
-http://yihui.name/knitr/>.
