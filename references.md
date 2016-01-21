@@ -20,7 +20,7 @@ http://dx.doi.org/10.1016/j.ecolecon.2004.06.015>.
 
 [4] D. Temple Lang and t. C. team. _RCurl: General Network
 (HTTP/FTP/...) Client Interface for R_. R package version
-1.95-4.7. 2015. <URL: http://CRAN.R-project.org/package=RCurl>.
+1.95-4.7. 2015. <URL: https://CRAN.R-project.org/package=RCurl>.
 
 [5] H. Wickham and W. Chang. _devtools: Tools to Make Developing R
 Packages Easier_. R package version 1.9.1. 2015. <URL:
