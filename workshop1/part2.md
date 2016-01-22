@@ -9,17 +9,17 @@ We will go through many of the same steps we did in Part 1, but this time we wil
 
 In Workshop 3 we will also explore the EXCELLENT RMarkdown functionality built into RStudio combining analysis with documentation and report writing making the entire process seamless and efficient!
 
-While RStudio has many more windows and menus enabling point-and-click interaction with R codes and functions, it is not the typicaly GUI (graphical user interface) 
+While RStudio has many more windows and menus enabling point-and-click interaction with R codes and functions, it is not the typicaly GUI (graphical user interface). You cannot perform canned statistical analyses through point-and-click menus in R and RStudio. Instead you record everything - all commands - for loading, manipulating, analyzing and even reporting all of your results. This enables complete documentation of the entire process greatly improving the ability to reproduce your research!!
 
 ## Launch RStudio
 
 --- 
 
-Go ahead launch RStudio and we will explore the interface.
+Go ahead and launch RStudio and we will explore the interface.
 
 When RStudio opens, your interface may not look the same as mine so we will systematically go through each window and explain what it does.
 
-If you do not have a script window open, do ahead and create one. Go to File/New File/R Script. This should open a blank window in the upper left corner of the software interface. This is basically a simple text window where we will type our R codes and then execute them rather than typing them in the "console" window (typically located in the bottom left corner).
+If you do not have a script window open, go ahead and create one. Go to "File/New File/R Script". This should open a blank window in the upper left corner of the software interface. This is basically a simple text window where we will type our R codes and then execute them rather than typing them in the "console" window (typically located in the bottom left corner).
 
 In this window let's put in the commands we ran before in Part 1.
 
@@ -33,9 +33,9 @@ pi
 4 * pi
 ```
 
-You will notice that as each command above is "run" (executed) the the command is echo'd in the console window at the bottom left and the output shown in the console as we did before in the Basic R interface.
+You will notice that as each command above is "run" (executed) the command is echo'd in the console window at the bottom left as well as the output which is also shown in the console like we did before in the Basic R interface.
 
-Again what if we want to save these values. To do so we have to assign them `<-` to a variable. So, let's run through the next set of commands. As you do so, watch the upper right window for the "Global Environment".
+Again, what if we want to save these values? To do so we have to assign them `<-` to a variable. So, let's run through the next set of commands. As you do so, watch the upper right window for the "Global Environment".
 
 ```
 x <- 3 * 5
@@ -47,7 +47,7 @@ sinz <- sin(z)
 ```
 You should notice that the variables created above now show up in the top right "Global Envrionment" window. You will notice that the variable `x` shows the value of 15. However, the other variables `y`, `z`, and `sinz` all show a list of numbers. These are all vectors.
 
-`x` is a vector of length 1 since it has only 1 element. You can confirm this using the `length()` function. Try running this function for each of the variables `x`, `y`, `z`, and `sinz`.
+`x` is a vector of length one (1) since it has only 1 element. You can confirm this using the `length()` function. Try also running the `length()` function for each of the variables `x`, `y`, `z`, and `sinz`.
 
 
 ```r
@@ -82,7 +82,7 @@ You should notice that the variables created above now show up in the top right 
 [1] 21
 ```
 
-This is only 1 way to learn about the variables you created. You will also notice that in the upper right window that each vector that has more than 1 element the size of the vector is listed inside the brackets `[]`'s. Each vector is also listed as to the type of vector it is. `z` and `sinz` are "numeric" vectors whereas `y` is an "integer" vector. This can also been seen using the structure function `str()` and `class()` function. Try using these and compare the results exploring the structure and class of `z` and `y`.
+This is only one way to learn about the variables you created. You will also notice that in the upper right window that each vector that has more than 1 element the size of the vector is listed inside the brackets `[]`'s. Each vector is also listed as to the type of vector it is. `z` and `sinz` are "numeric" vectors whereas `y` is an "integer" vector. This can also been seen using the structure function `str()` and `class()` function. Try using these functions and compare the results exploring the structure and class of `z` and `y`.
 
 
 ```r
@@ -173,18 +173,18 @@ Use the `class()` function and see what type each vector is. What class type is 
 
 When types are mixed, R sets them all to the type that will best encompass and retain the values. 
 
-We will cover many more variable types in the later Workshops. However, let's look at 1 more variable type that is the mainstay of most R data handling and analyses - the Data Frame. One way to create a data frame is to combine vectors of the same size together. We can combine these using the `data.frame()` function. For this example we will combine the `y` vector we created with numbers 1 to 12 and combine these with the saved constant vectors of the month names (`month.name`) and month abbreviations (`month.abb`).
+We will cover many more variable types in the later Workshops. However, let's look at 1 more variable type that is the mainstay of most R data handling and analyses - the **Data Frame**. One way to create a data frame is to combine vectors of the same size together. We can combine these using the `data.frame()` function. For this example we will combine the `y` vector we created with numbers 1 to 12 and combine these with the saved constant vectors of the month names (`month.name`) and month abbreviations (`month.abb`) - all 3 vectors of length 12 - although `y` is an integer vector whereas `month.name` and `month.abb` are both character vectors. **Data Frames** are designed to combine vectors of different types together as long as they are the same length.
 
 
 ```r
 > df1 <- data.frame(y, month.name, month.abb)
 ```
 
-You will notice that this new object is create and shows up in the upper right window but is now listed as "Data" instead of simply as "Values". There is also now a little blue circle with an arrow in it next to the object `df1`. Click this little arrow. This opens up a list of each of the variables now contained inside this data frame. You can also "View" the data in this data frame by clicking on the little table/grid icon to the right of the object listed in the top right window. This basically runs the `View(df1)` code without you having to type it. In fact, check the console window at the lower left to confirm that this is correct.
+You will notice that this new object `df1` is created and shows up in the upper right window but is now listed as "Data" instead of simply as "Values". There is also now a little blue circle with an arrow in it just to the left of object `df1`. Click this little arrow. This opens up a list of each of the variables now contained inside this data frame. You can also "View" the data in this data frame by clicking on the little table/grid icon to the right of the object listed in the top right window. This basically runs the `View(df1)` code without you having to type it. In fact, check the console window at the lower left to confirm that this is correct.
 
 ## Let's load a package with added functionality - ggplot2, aka "The Grammar of Graphics"
 
-What are packages? R packages are how additional functionality is added to R beyond what is available in the base software system. There are 3 main ways to find packages of interest to add functionality. The biggest of the 3 is [CRAN](https://cran.r-project.org/) which is the Comprehensive R Archive Network. As of this writing there are over 7000+ packages on [CRAN](https://cran.r-project.org/web/packages/). Other places to get R packages include [GitHub](https://github.com/); [Bioconductor](https://www.bioconductor.org/) and simply getting the ZIP file from the creator/maintainer directly.
+What are packages? R packages are how additional functionality is added to R beyond what is available in the base software system. There are 3 main ways to find packages of interest to add functionality. The biggest of the 3 is [CRAN](https://cran.r-project.org/) which is the Comprehensive R Archive Network. As of this writing there are over 7000+ packages on [CRAN](https://cran.r-project.org/web/packages/) `https://cran.r-project.org/web/packages/`. Other places to get R packages include [GitHub](https://github.com/) `https://github.com/`; [Bioconductor](https://www.bioconductor.org/) `https://www.bioconductor.org/` or simply getting the ZIP file from the creator/maintainer directly.
 
 There are a couple of ways to install packages. Using the RStudio menus, click on "Tools/Install Packages". Usually the default Repository will be CRAN. Here you simply type in the name of the package you want "ggplot2". Alternatively, you can run the `install.packages()` function. The command to install `ggplot2` is
 
@@ -192,7 +192,7 @@ There are a couple of ways to install packages. Using the RStudio menus, click o
 install.packages("ggplot2")
 ```
 
-Once a package is installed, it is now located on your hard drive but is not yet ready to be used in R. Now you have to load the package into memory so that the functions inside that package can be used. For this you need the `library()` function. Let's load `ggplot2` and then let's run help on it to read more about the package.
+Once a package is installed, it is now located on your hard drive but is not yet ready to be used in R. Now you have to load the package into memory so that the functions inside that package can be used. For this you need the `library()` function. Let's load `ggplot2` and then run help on it to read more about the package.
 
 
 ```r
@@ -229,7 +229,7 @@ Here is a similar plot using `qplot`. It will not look exactly the same. We will
 
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
-Notice the added graphics window at the lower right side of the RStudio interface. There is more functionality for viewing and exporting graphics from this window.
+Notice the added graphics window at the lower right side of the RStudio interface. There is more functionality for viewing and exporting graphics from this window. Take a few moments and explore the "Plots" window in the lower right. Click "Zoom" to view the plot in a larger detached window. Also explore the options under the "Export" menu item within this "Plots" window.
 
 ## Complete R code script from Part 2
 
