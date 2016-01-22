@@ -7,21 +7,21 @@ opts_chunk$set(prompt=TRUE, comment='', results='markup')
 # end setup chunk
 ```
 # Workshop 1 - Part 1
-## Working in Basic R Environment
+## Working in Basic R
 
 --- 
 
-For this first part, open/run R on your computer. When R opens, you will see 1 main window with 1 smaller window with a cursor `>` this is where you can type commands and get immediate feedback allowing you to work with R interactively.
+For this first part, open/run the Basic R on your computer. When R opens, you will see 1 main window with 1 smaller window with a cursor `>` this is where you can type commands and get immediate feedback allowing you to work with R interactively.
 
 ## Find out which directory R thinks is your home directory
 
 --- 
 
-Type `getwd()` at the prompt `>`
+Type `getwd()` at the prompt `>` which is short for "get working directory"
 
 `r getwd()`
 
-Let's change this to a directory on your computer that already exists. As an example on my computer I already created a directory for these workshops at `C:\MyR\2016_Spring_RWorkshops`. However, for this to work in R I have to flip the `\` backslashes to the `/` forward slashes. So, at the prompt to change my working directory I would type:
+Let's change this to a directory on your computer that already exists. So, go ahead and create a directory on your computer where you want to save your files and work. As an example on my computer I already created a directory for these workshops at `C:\MyR\2016_Spring_RWorkshops`. However, for this to work in R I have to flip the `\` backslashes to the `/` forward slashes. So, at the prompt to change my working directory I would type:
 
 `setwd("C:/MyR/2016_Spring_RWorkshops")`
 
@@ -173,6 +173,8 @@ Once the plot is created, in the graphics Window, right click and either copy as
 To finish Part 1 - close/exit the R program. BEFORE you close R, you can save your Workspace (xxx.RData) and save your History (xxx.Rhistory). The Workspace saves all of the variables and data you created. The History file saves every command you typed during your R session - this is similar to a SAS log file and the running SYNTAX saved to the SPSS output file and log. SPSS also has a Journal file which also saves commands you've entered during each session.
 
 ## Complete R code script from Part 1
+
+--- 
 
 ```
 # ====================================
