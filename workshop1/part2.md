@@ -214,7 +214,7 @@ Here is the previous plot we did using the base R commands.
 > points(z, sinz, pch = 23, col = 'red', bg = 'black')
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
 
 Here is a similar plot using `qplot`. It will not look exactly the same. We will learn more powerful graphing functions using ggplot2 and other packages in the later workshops.
 
@@ -227,7 +227,7 @@ Here is a similar plot using `qplot`. It will not look exactly the same. We will
 +       main = 'Main title')
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
 
 Notice the added graphics window at the lower right side of the RStudio interface. There is more functionality for viewing and exporting graphics from this window. Take a few moments and explore the "Plots" window in the lower right. Click "Zoom" to view the plot in a larger detached window. Also explore the options under the "Export" menu item within this "Plots" window.
 
@@ -325,15 +325,15 @@ other attached packages:
 [1] ggplot2_2.0.0       knitcitations_1.0.7 Rgitbook_0.9       
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.2       knitr_1.11        magrittr_1.5     
- [4] munsell_0.4.2     colorspace_1.2-6  R6_2.1.1         
- [7] bibtex_0.4.0      stringr_1.0.0     httr_1.0.0       
-[10] plyr_1.8.3        tools_3.2.3       grid_3.2.3       
-[13] gtable_0.1.2      digest_0.6.8      RJSONIO_1.3-0    
-[16] RefManageR_0.8.63 formatR_1.2.1     bitops_1.0-6     
-[19] codetools_0.2-14  RCurl_1.95-4.7    evaluate_0.8     
-[22] labeling_0.3      stringi_1.0-1     scales_0.3.0     
-[25] XML_3.98-1.3      lubridate_1.5.0  
+ [1] Rcpp_0.12.3       lubridate_1.5.0   XML_3.98-1.3     
+ [4] digest_0.6.9      bitops_1.0-6      grid_3.2.3       
+ [7] plyr_1.8.3        R6_2.1.2          gtable_0.1.2     
+[10] formatR_1.2.1     magrittr_1.5      scales_0.3.0     
+[13] evaluate_0.8      bibtex_0.4.0      httr_1.1.0       
+[16] stringi_1.0-1     labeling_0.3      RJSONIO_1.3-0    
+[19] tools_3.2.3       stringr_1.0.0     RefManageR_0.10.5
+[22] munsell_0.4.2     RCurl_1.95-4.7    colorspace_1.2-6 
+[25] knitr_1.12.3     
 ```
 
 

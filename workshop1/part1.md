@@ -252,13 +252,13 @@ So, we've created about 4 variables so far. Where are they? To look at what vari
 > plot(z,sinz)
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
 
 Next redo plot with axis labels, a title and a subtitle
 
 `plot(z,sinz,xlab='Z = Sequence 0 to 10 by 0.5',ylab='Sin(Z)',main='Main title',sub='example subtitle')`
 
-![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)
 
 The `plot()` function opens a new plot. So to overlay a line or add or modify the points in the plot there are additional functions `lines()` and `points()` that can be used to overlay and augment the exisiting plot currently displayed.
 
@@ -266,13 +266,13 @@ So, let's add a BLUE line to the plot overlaid on the points shown.
 
 `lines(z,sinz,col='blue')`
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png) 
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
 
 And let's customize the points. The plotting character `pch=23` is a filled diamond. `col` defines the color and `bg` defines the filled or background color.
 
 `points(z,sinz,pch=23,col='red',bg='black')`
 
-![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png) 
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png)
 
 Alternatively, we can create a script and run all of these R commands together. Here is the code all together. In the print out below, the additional commands that appear on following lines are indicated by a plus `+` sign until all options are defined and the function is complete.
 
@@ -286,7 +286,7 @@ Alternatively, we can create a script and run all of these R commands together. 
 > points(z, sinz, pch = 23, col = 'red', bg = 'black')
 ```
 
-![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png) 
+![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png)
 
 Next go to the File menu and click "New Script". Then cut and paste the commands above into this window and save the script file in your directory - something like "plot1.r" - script files default to the extension `.r`. Then, select (_highlight_) the code you just put into the window, right click and "run selection or highlight the code and click CTRL-R to specifically run the following code all together. Note: the spaces and line returns were added for clarity. Note: RStudio helps with good formatting practices.
 

@@ -9,7 +9,7 @@ Here is a citation for `knitr` [@xie2015knitr] which didn't work like usual cita
 
 Try one more (Rehdanz and Maddison, 2005) and (Wickham and Chang, 2015).
 
-Try one of mine (Fitzpatrick, Higgins, Holguin, et al., 2010) 
+Try one of mine (Fitzpatrick, Higgins, Holguin, Brown, and Teague, 2010) 
 
 also try (Fitzpatrick, Higgins, Holguin, et al., 2010)
 
