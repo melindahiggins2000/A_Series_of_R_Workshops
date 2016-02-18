@@ -4,147 +4,272 @@
 
 --- 
 
-## Import a basic CSV (comma delimited) data file
+## Example Datafiles
 
-Let's import a simple data file in CSV (comma delimited) format. This is the most common simple format used for exchanging data between different software/data handling packages.
-
-
-
-
-
-
-
-
-## Getting started
-
-Open RStudio and open a new R script (File/New File/R Script).
-
-Each time you start a new project, it is a good idea to create a new folder on your system where you will keep all of your files: data, coding, output and reports/documentation.
-
-Once your new folder is created, use `setwd()` to make sure that RStudio is setup to look by default in this directory for your files and where it will save your work.
-
-For the purposes of my demonstration here I am working in the following directory `C:\MyR\2016_Spring_RWorkshops`. **NOTE in windows the file path uses the backslash character "\". R does not understand this as part of a file path. You must change these backslashes to forward slashes "/" in order for the file path to work. The backslash "\" is a special character in R.** I do not think this is a problem on a Mac.
-
-So to change the directory we run the following command (see below). This can also be accomplished using the menu option Session/Set Working Directory/Choose Directory or using the HOT KEYS `Cntl+Shift+H` (on a PC). You'll notice when choosing this menu option the command I show below is automatically run in the console.
-
-While the menu options are handy it is a good idea to include the `setwd()` command into your R script so you document explicitly where you are working and organizing your project files.
-
-
-```r
-> setwd('C:/MyR/2016_Spring_RWorkshops')
-```
-
-## Clear your workspace when starting a new project
-
-It is also a good idea when starting a NEW project for the FIRST time to clear your workspace. This can be accomplished through the menus in Session/Clear Workspace. However, this can also be accomplished with the following R code:
-
-
-```r
-> rm(list = ls())
-```
-
-NOTE: You do NOT need to do this every time you open R. It is just a good idea to do it at the beginning of a project. Once you've got a project running and underway, you probably want to pick up where you left off and keep the objects and data elements you've created so far in your global environment. That is OK.
-
-## Cleaning up your environment as you go.
-
-You can also remove objects as you go. This is especially helpful when working with (A) really large data files and objects and (B) if you are working with a large number of objects or with programs or functions that create many objects that you don't need long term (i.e. temporary files).
-
-Let's create some objects:
-
-
-```r
-> x <- 3 * 8 + 6
-> y <- 1:12
-> y2 <- y**2
-> df1 <- cbind(y, y2, month.abb, month.name)
-> z <- seq(0,10,.5)
-> sinz <- sin(z)
-> df2 <- cbind(z, sinz)
-```
-
-Notice that we created `y` and `y2` and included these in data frame 1 `df1`. So, now we have the same data/information in 2 places which is redundant. So, we could remove `y` and `y2` since they are now contained inside `df1`. Similarly, we created `z` and `sinz` which are contained inside `df2`. So, let's **clean** up our environment by removing `y`, `y2`, `z`, `sinz`.
-
-
-```r
-> rm(y, y2, z, sinz)
-```
-
-You should see that these 4 objects have now been removed from your global environment.
-
-## Saving your work, i.e. your "workspace" - Moving R data and objects in and out of the R environment using `save` and `load`
-
-Now we have 3 objects in our Global Enviroment or "Workspace". These objects are 
-* x (a single numeric value of 30)
-* df1 (a data frame with 12 rows and 4 columns)
-* df2 (a data frame with 21 rows and 2 columns)
-
-List these objects using `ls()` or the more detailed `ls.str()` functions: 
-
-```r
-> ls()
-```
+I have created a simple dataset for us to work with. The files are available via Dropbox at [https://www.dropbox.com/sh/vlo5bzrl5ayo1bk/AADD0WieyuEdyGwiveuCoRr-a?dl=0](https://www.dropbox.com/sh/vlo5bzrl5ayo1bk/AADD0WieyuEdyGwiveuCoRr-a?dl=0)
 
 ```
-[1] "df1" "df2" "x"  
+The following files are in this folder:
+02/18/2016  03:22 PM             2,513 Dataset_01.sav
+09/13/2013  02:25 PM            30,208 Dataset_01.xls
+09/07/2013  05:44 PM            10,338 Dataset_01.xlsx
+09/13/2013  02:26 PM               567 Dataset_01_comma.csv
+09/13/2013  02:26 PM               567 Dataset_01_tab.txt
+09/07/2013  05:45 PM            30,022 NRSG736_01Handout.docx
 ```
 
-```r
-> ls.str()
-```
+These data files include:
+* XLS - the older 1997-2003 EXCEL file format
+* XLSX - the newer EXCEL file workbook format
+* CSV - a comma delimited dataset
+* xxx_tab.TXT - a TAB delimited dataset
+* SAV - SPSS file format
 
-```
-df1 :  chr [1:12, 1:4] "1" "2" "3" "4" "5" "6" "7" "8" "9" ...
-df2 :  num [1:21, 1:2] 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 ...
-x :  num 30
-```
+We will work through importing each of these file types.
 
-You can save all of these objects as a `*.RData` file which saves the workspace with all of the objects into 1 file. This can be achieved a couple of ways. In the Global Enviroment window (top right) you can click on the "save disk" icon. This can also be achieved through the menus at Session/Save Workspace As. You can also run the `save()` or `save.image()` functions.
+---
 
-Let's use the `save.image()` function:
+## The dataset description
+
+The dataset we'll be working with here has 8 variables and 20 cases (or 20 subjects).
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> SubjectID </th>
+   <th style="text-align:right;"> Age </th>
+   <th style="text-align:right;"> WeightPRE </th>
+   <th style="text-align:right;"> WeightPOST </th>
+   <th style="text-align:right;"> Height </th>
+   <th style="text-align:right;"> SES </th>
+   <th style="text-align:right;"> GenderSTR </th>
+   <th style="text-align:right;"> GenderCoded </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 45 </td>
+   <td style="text-align:right;"> 150 </td>
+   <td style="text-align:right;"> 145 </td>
+   <td style="text-align:right;"> 5.6 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 50 </td>
+   <td style="text-align:right;"> 167 </td>
+   <td style="text-align:right;"> 166 </td>
+   <td style="text-align:right;"> 5.4 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> f </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:right;"> 143 </td>
+   <td style="text-align:right;"> 135 </td>
+   <td style="text-align:right;"> 5.6 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> F </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 44 </td>
+   <td style="text-align:right;"> 216 </td>
+   <td style="text-align:right;"> 201 </td>
+   <td style="text-align:right;"> 5.6 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:right;"> 243 </td>
+   <td style="text-align:right;"> 223 </td>
+   <td style="text-align:right;"> 6.0 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 48 </td>
+   <td style="text-align:right;"> 165 </td>
+   <td style="text-align:right;"> 145 </td>
+   <td style="text-align:right;"> 5.2 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> f </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 50 </td>
+   <td style="text-align:right;"> 132 </td>
+   <td style="text-align:right;"> 132 </td>
+   <td style="text-align:right;"> 5.3 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:right;"> 110 </td>
+   <td style="text-align:right;"> 108 </td>
+   <td style="text-align:right;"> 5.1 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> f </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 46 </td>
+   <td style="text-align:right;"> 167 </td>
+   <td style="text-align:right;"> 158 </td>
+   <td style="text-align:right;"> 5.5 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;">  </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:right;"> 190 </td>
+   <td style="text-align:right;"> 200 </td>
+   <td style="text-align:right;"> 5.8 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> Male </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 36 </td>
+   <td style="text-align:right;"> 230 </td>
+   <td style="text-align:right;"> 210 </td>
+   <td style="text-align:right;"> 6.2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 40 </td>
+   <td style="text-align:right;"> 200 </td>
+   <td style="text-align:right;"> 195 </td>
+   <td style="text-align:right;"> 6.1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> f </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 45 </td>
+   <td style="text-align:right;"> 180 </td>
+   <td style="text-align:right;"> 185 </td>
+   <td style="text-align:right;"> 5.9 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> f </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 52 </td>
+   <td style="text-align:right;"> 240 </td>
+   <td style="text-align:right;"> 220 </td>
+   <td style="text-align:right;"> 6.5 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 24 </td>
+   <td style="text-align:right;"> 250 </td>
+   <td style="text-align:right;"> 240 </td>
+   <td style="text-align:right;"> 6.4 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> M </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:right;"> 175 </td>
+   <td style="text-align:right;"> 174 </td>
+   <td style="text-align:right;"> 5.8 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> F </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:right;"> 220 </td>
+   <td style="text-align:right;"> 221 </td>
+   <td style="text-align:right;"> 6.3 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 43 </td>
+   <td style="text-align:right;"> 230 </td>
+   <td style="text-align:right;"> 215 </td>
+   <td style="text-align:right;"> 2.6 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> m </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 36 </td>
+   <td style="text-align:right;"> 190 </td>
+   <td style="text-align:right;"> 180 </td>
+   <td style="text-align:right;"> 5.7 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> female </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:right;"> 44 </td>
+   <td style="text-align:right;"> 260 </td>
+   <td style="text-align:right;"> 240 </td>
+   <td style="text-align:right;"> 6.4 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> male </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
 
 
-```r
-> save.image("workshop2objects.RData")
-```
-
-We could also save individual objects as `*.RData` files. For example suppose we wanted to save the 2nd data frame `df2`, we would use the `save()` function.
 
 
-```r
-> save(df2, file="df2.RData")
-```
-
-Look in your current working directory and make sure that you now see both of these files: <br> <br> `workshop2objects.RData` <br> and <br> `df2.RData`
-
-Now that we know these files have been saved, let's remove them from our environment and add them back in. We will use the `load()` command to read these data back into our environment.
-
-First clear the environment:
 
 
-```r
-> rm(list = ls())
-```
-
-Then `load()` the data back. Let's load `df2.RData` first and then the complete workspace `workshop2objects.RData`.
 
 
-```r
-> load(file="df2.RData")
-```
-
-Next the full workspace.
 
 
-```r
-> load("workshop2objects.RData")
-```
 
-You have now successfully accomplished the following:
-* created data objects in R
-* saved your entire workspace collection of objects
-* saved a specific data frame object
-* cleared your workspace
-* loaded back the specific data frame object
-* and loaded back your entire workspace
 
-Next - let's load or import external data files (such as from Excel, CSV and SPSS) and save them back out.
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,50 @@ opts_chunk$set(prompt=TRUE, comment='', results='markup')
 
 --- 
 
+## Example Datafiles
+
+I have created a simple dataset for us to work with. The files are available via Dropbox at [https://www.dropbox.com/sh/vlo5bzrl5ayo1bk/AADD0WieyuEdyGwiveuCoRr-a?dl=0](https://www.dropbox.com/sh/vlo5bzrl5ayo1bk/AADD0WieyuEdyGwiveuCoRr-a?dl=0)
+
+```
+The following files are in this folder:
+02/18/2016  03:22 PM             2,513 Dataset_01.sav
+09/13/2013  02:25 PM            30,208 Dataset_01.xls
+09/07/2013  05:44 PM            10,338 Dataset_01.xlsx
+09/13/2013  02:26 PM               567 Dataset_01_comma.csv
+09/13/2013  02:26 PM               567 Dataset_01_tab.txt
+09/07/2013  05:45 PM            30,022 NRSG736_01Handout.docx
+```
+
+These data files include:
+* XLS - the older 1997-2003 EXCEL file format
+* XLSX - the newer EXCEL file workbook format
+* CSV - a comma delimited dataset
+* xxx_tab.TXT - a TAB delimited dataset
+* SAV - SPSS file format
+
+We will work through importing each of these file types.
+
+---
+
+## The dataset description
+
+The dataset we'll be working with here has 8 variables and 20 cases (or 20 subjects).
+
+```{r echo=FALSE, results="asis"}
+kable(Dataset_01_comma, format="html", align='r')
+```
+
+
+```{r echo=false, results="asis"}
+# IGNORE FOR NOW
+#Try xtable - see below
+#xt <- xtable(Dataset_01_comma)
+#print(xt, type="html")
+#
+```
+
+
+
 ## Import a basic CSV (comma delimited) data file
 
 Let's import a simple data file in CSV (comma delimited) format. This is the most common simple format used for exchanging data between different software/data handling packages.

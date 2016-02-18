@@ -88,6 +88,8 @@ publishGitbook("melindahiggins2000/gitbook3")
 setwd("C:/MyGithub/A_Series_of_R_Workshops")
 library(Rgitbook)
 library(knitcitations)
+library(knitr)
+library(xtable)
 
 # for a bibliography to be added
 # assign it to the global environment first.
