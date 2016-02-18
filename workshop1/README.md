@@ -2,7 +2,7 @@
 
 <hr>
 
-#### January 22, 2016 <br> 10:00 - 11:50 <br> Nursing Building Room 112
+#### January 22, 2016 <br> 10:00 - 11:50 <br> and makeup session February 17, 2016 <br> 2:00 - 3:50 <br> Nursing Building Room 112
 
 <hr>
 

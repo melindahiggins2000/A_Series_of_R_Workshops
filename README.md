@@ -15,7 +15,7 @@ R has a steep learning curve. It was not designed to have a point-and-click menu
 
 ## Four R Workshops and Projected Goals
 
-1.	[1/22/2016 (and 02/17/2016) "Introduction to R, RStudio and Working in the R Environment"](./workshop1/index.html)
+1.	[1/22/2016 (and makeup 02/17/2016) "Introduction to R, RStudio and Working in the R Environment"](./workshop1/index.html)
     + Goal 1: Be able to open and work with R and RStudio on your own computer (or one you have access to) - initial familiarization with R, RStudio interface and R Environment
     + Goal 2: Initial understanding of what "packages" are, how to load them and use them
     + Goal 3: Initial understanding of where and how to get help
