@@ -97,7 +97,7 @@ bib <- read.bibtex("mybib.bib")
 cleanbib()
 
 # set clean=TRUE to make sure each RMD file gets rebuilt
-buildRmd(clean=TRUE)
+# buildRmd(clean=TRUE)
 buildRmd()
 buildGitbook()
 openGitbook()
