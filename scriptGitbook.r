@@ -109,8 +109,8 @@ cleanbib()
 # Dataset_01_comma <- read.csv(file="./datasets/Dataset_01_comma.csv")
 
 # set clean=TRUE to make sure each RMD file gets rebuilt
-# buildRmd(clean=TRUE)
-buildRmd()
+buildRmd(clean=TRUE)
+# buildRmd()
 buildGitbook()
 openGitbook()
 
