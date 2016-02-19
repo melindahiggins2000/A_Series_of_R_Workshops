@@ -1,0 +1,67 @@
+rigor and reproducibility
+
+nature articles
+
+amgen experiments 2012 - 53 preclinical studies
+
+F1000 webpage - outlet for reproducibility - publish verification studies
+AMGEN going to start publishing their work here
+
+support for OPEN SCIENCE
+
+journals unite for reproducibility - nature and science partnered on this
+
+making dat aavailable - the DRYAD experience - data repositories
+DOIs for datasets (Gary Miller and Lance Waller working on)
+
+to be addressed in the research strategy of a grant proposal
+* scientifics premise - evaluate strengths and weaknessed of earlier research (lit search/refs) - building on a strong or weak foundation
+* scientific rigor - strict scientific methods - torubst, unbiased expt design, methods, analyses, interpretation and reporting - include transparency of all analyses
+* Strict application of scientific method - 1993 book Apprentice to Genius - some followinh hunches, taking flyers, tinkering is OK - but much be evaluated rigorously before publishing and finalizing
+* 
+* cell lines - biological and chemical resources - cell lines, strains, commerical products - test your reagents and commerical antibodies - don't trust what comes from the manufacturer
+
+These should be addressed within the proposal - reference where in the proposal each is addressed. Janet Gross focus on grant writing aspects
+
+these will be WITHIN the overall impact consideration
+
+NIH NOT-OD-15-103 -- see end on implementation -- on due dates 1/25/2016 and beyond
+
+* scientific premise in research strategy and in significance and in approach
+* could all attachment under the other research plan sections
+* SEE in GRANT application guide - SIGNIFICANCE in (3) Research Strategy - in PURPLE on PDF from WEB - new stuff from last
+* 
+
+USE these new words in the frant - higlight them in approach and human subjects - bold them - use in headers or underline
+
+SEE NIH reproducibility FAQs - great ways to get good language!!
+
+identify and MANAGE high risk studies - regarding rigor
+
+history and integrity of data repository - quality control - selection, storage, transport (samples)
+but also - history of existing datasets or repositories - background - validity - data checks - use rigor, trandparency language to support using this dataset...
+
+barely statistically significant is this really biologically relevant - define why p-.05 is appropriate because...
+
+not needed for K's and NRSAs yet... coming in the future
+
+CAREFULLY your FOA closely regarding these issues
+
+new NIH grant form pages (Form D) are coming at the end of March 2016
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

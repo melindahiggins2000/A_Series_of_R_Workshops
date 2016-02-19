@@ -444,20 +444,19 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_2.0.0       readxl_0.1.0        xtable_1.8-2       
-[4] knitr_1.12.3        knitcitations_1.0.7 Rgitbook_0.9       
-[7] foreign_0.8-66     
+[1] ggplot2_2.0.0       foreign_0.8-66      readxl_0.1.0       
+[4] xtable_1.8-2        knitr_1.12.3        knitcitations_1.0.7
+[7] Rgitbook_0.9       
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.3       magrittr_1.5      devtools_1.10.0  
- [4] munsell_0.4.2     colorspace_1.2-6  R6_2.1.2         
- [7] bibtex_0.4.0      stringr_1.0.0     httr_1.1.0       
-[10] highr_0.5.1       plyr_1.8.3        tools_3.2.3      
-[13] grid_3.2.3        gtable_0.1.2      digest_0.6.9     
-[16] RJSONIO_1.3-0     RefManageR_0.10.5 formatR_1.2.1    
-[19] bitops_1.0-6      RCurl_1.95-4.7    memoise_1.0.0    
-[22] evaluate_0.8      labeling_0.3      stringi_1.0-1    
-[25] scales_0.3.0      XML_3.98-1.3      lubridate_1.5.0  
+ [1] Rcpp_0.12.3       magrittr_1.5      munsell_0.4.2    
+ [4] colorspace_1.2-6  R6_2.1.2          bibtex_0.4.0     
+ [7] stringr_1.0.0     httr_1.1.0        plyr_1.8.3       
+[10] tools_3.2.3       grid_3.2.3        gtable_0.1.2     
+[13] digest_0.6.9      RJSONIO_1.3-0     RefManageR_0.10.5
+[16] formatR_1.2.1     bitops_1.0-6      RCurl_1.95-4.7   
+[19] evaluate_0.8      labeling_0.3      stringi_1.0-1    
+[22] scales_0.3.0      XML_3.98-1.3      lubridate_1.5.0  
 ```
 
 

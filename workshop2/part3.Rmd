@@ -15,6 +15,8 @@ Now that we've read data in and exported data out of R, let's run some simple st
 
 ## Some simple statistics
 
+The `summary()` function is a quick simple way to get basic summary statistics on every variable in a dataset.
+
 ```{r}
 data.csv <- read.csv(file="C:/MyGithub/A_Series_of_R_Workshops/datasets/Dataset_01_comma.csv")
 summary(data.csv)

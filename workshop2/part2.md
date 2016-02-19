@@ -8,24 +8,15 @@
 
 I have created a simple dataset for us to work with. The files are available via Dropbox at [https://www.dropbox.com/sh/vlo5bzrl5ayo1bk/AADD0WieyuEdyGwiveuCoRr-a?dl=0](https://www.dropbox.com/sh/vlo5bzrl5ayo1bk/AADD0WieyuEdyGwiveuCoRr-a?dl=0)
 
-```
-The following files are in this folder:
-02/18/2016  03:22 PM             2,513 Dataset_01.sav
-09/13/2013  02:25 PM            30,208 Dataset_01.xls
-09/07/2013  05:44 PM            10,338 Dataset_01.xlsx
-09/13/2013  02:26 PM               567 Dataset_01_comma.csv
-09/13/2013  02:26 PM               567 Dataset_01_tab.txt
-09/07/2013  05:45 PM            30,022 NRSG736_01Handout.docx
-```
-
-These data files include:
+The data files include:
 * XLS - the older 1997-2003 EXCEL file format
 * XLSX - the newer EXCEL file workbook format
 * CSV - a comma delimited dataset
 * xxx_tab.TXT - a TAB delimited dataset
 * SAV - SPSS file format
+* and R scripts (xxx.R) for Workshops 1 and 2 so far...
 
-We will work through importing each of these file types.
+We will work through importing each of these datafile types.
 
 ---
 
@@ -438,12 +429,12 @@ Here is code for reading in a XLSX format
 
 ## IMPORT data from a SPSS file in SAV format
 
-In order to read datafiles from SPSS, other statistical software, and many other datafile types. To see detailed info look at help for the `foreign` package. Run the following code:
+In order to read datafiles from SPSS, other statistical software, and many other datafile types. To see detailed info look at help for the `foreign` package. Remember to `install.packages("foreign")` and load the package using `library(foreign)`. Run the following code to see details on this package and all the formats supported:
 
 ```
 help(package = "foreign")
 ```
-We will use this package to read in an SPSS datafile in the SAV format. The function we will use is `read.spss()`. See more detailed information on the various options by running `help(read.spss)`. For now we will specify the filename and tell the function to make sure the file is output as a data frame object.
+We will use this package to read in an SPSS datafile in the SAV format. The function we will use is `read.spss()`. See more detailed information on the various options by running `help(read.spss)`. For now we will specify the filename and tell the function to make sure the file is output as a data frame object using the `to.data.frame` option set to `TRUE`.
 
 
 ```r
@@ -503,6 +494,8 @@ In the datafile we have weights measures at 2 time points and we have height. We
 
 `BMI_PRE=(WeightPRE*703)/((Height*12)*(Height*12))`
 
+From here let's work with `data.csv`. Since we have weights and height we can compute BMI. Let's do that here with weights in pounds and height in decminal feet which we'll convert to inches in the formula given here. You'll notice that I'm selecting the variables using the $ dollar sign. I'm also creating 2 NEW variables `bmiPRE` and `bmiPOST`. By creating them on the left side of the `<-` and using the $ this automatically APPENDS these new variables to the exisiting data frame `data.csv`. When we do this the data frame `data.csv` will go from having 8 variables to 9 and then to 10. Watch the global environment window as you run each line of code below.
+
 
 ```r
 > data.csv$bmiPRE <- (data.csv$WeightPRE*703)/((data.csv$Height*12)**2)
@@ -516,6 +509,39 @@ And we'll do it again for the POST weights:
 ```r
 > data.csv$bmiPOST <- (data.csv$WeightPOST*703)/((data.csv$Height*12)**2)
 ```
+
+#### Isn't there an easier way besides using $?
+
+So, yes, it is a pain to have to type in the data frame followed by a dollar sign $ and then the variable name. If you know for sure you're going to mainly be working with one data frame, you can ATTACH the variables inside data frame to your current environment so you can access the variables withouth having to type the name of the data frame and $ each time. For more info see this blog post at R-boggers [http://www.r-bloggers.com/to-attach-or-not-attach-that-is-the-question/](http://www.r-bloggers.com/to-attach-or-not-attach-that-is-the-question/)
+
+Once we attach the dataset, you can call the variables directly. See example below to compute the change in BMI from PRE-to-POST and then find the mean of these differences.
+
+
+```r
+> attach(data.csv)
+> 
+> diff <- bmiPOST - bmiPRE
+> mean(diff)
+```
+
+```
+[1] -1.598245
+```
+
+```r
+> detach(data.csv)
+```
+
+**ALWAYS remember to DETACH your data frame when finished.**
+
+Now that we have a new variable created the `diff` object, it is sitting in the global environment not attached to the original data frame. We can add it to the data frame `data.csv` as follows:
+
+
+```r
+> data.csv$diff <- diff
+```
+
+Now that we've updated our dataset, let's save it using the basic `save()` function - we can save it as a R formatted file `xxx.RData`
 
 ## EXPORT or SAVE the updated data
 
