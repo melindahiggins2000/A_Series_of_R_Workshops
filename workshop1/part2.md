@@ -452,12 +452,12 @@ loaded via a namespace (and not attached):
  [4] munsell_0.4.2     colorspace_1.2-6  R6_2.1.2         
  [7] bibtex_0.4.0      stringr_1.0.0     httr_1.1.0       
 [10] highr_0.5.1       plyr_1.8.3        tools_3.2.3      
-[13] grid_3.2.3        gtable_0.1.2      htmltools_0.3    
-[16] digest_0.6.9      RJSONIO_1.3-0     RefManageR_0.10.5
-[19] formatR_1.2.1     bitops_1.0-6      RCurl_1.95-4.7   
-[22] memoise_1.0.0     evaluate_0.8      rmarkdown_0.9.2  
-[25] labeling_0.3      stringi_1.0-1     scales_0.3.0     
-[28] XML_3.98-1.3      lubridate_1.5.0  
+[13] grid_3.2.3        gtable_0.1.2      digest_0.6.9     
+[16] RJSONIO_1.3-0     RefManageR_0.10.5 formatR_1.2.1    
+[19] bitops_1.0-6      codetools_0.2-14  RCurl_1.95-4.7   
+[22] memoise_1.0.0     evaluate_0.8      labeling_0.3     
+[25] stringi_1.0-1     scales_0.3.0      XML_3.98-1.3     
+[28] lubridate_1.5.0  
 ```
 
 

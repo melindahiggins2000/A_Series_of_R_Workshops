@@ -12,6 +12,7 @@ This "book" is summarized as follows: This "book" is the assembly of the materia
 * [Workshop 2](workshop2/README.md)
     * [RStudio Environment & Setup](workshop2/part1.md)
     * [Import, Export External Data](workshop2/part2.md)
+    * [Simple Stat Summaries](workshop2/part3.md)
 * [Workshop 3](workshop3/README.md)
     * [in development - placeholder](workshop3/example1.md)
 * [Workshop 4](workshop4/README.md)

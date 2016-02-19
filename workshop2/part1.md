@@ -20,7 +20,20 @@ While the menu options are handy it is a good idea to include the `setwd()` comm
 
 
 ```r
+> getwd()
+```
+
+```
+[1] "C:/MyGithub/A_Series_of_R_Workshops/workshop2"
+```
+
+```r
 > setwd('C:/MyR/2016_Spring_RWorkshops')
+> getwd()
+```
+
+```
+[1] "C:/MyR/2016_Spring_RWorkshops"
 ```
 
 ## Clear your workspace when starting a new project
@@ -30,6 +43,11 @@ It is also a good idea when starting a NEW project for the FIRST time to clear y
 
 ```r
 > rm(list = ls())
+> ls()
+```
+
+```
+character(0)
 ```
 
 NOTE: You do NOT need to do this every time you open R. It is just a good idea to do it at the beginning of a project. Once you've got a project running and underway, you probably want to pick up where you left off and keep the objects and data elements you've created so far in your global environment. That is OK.
@@ -51,11 +69,26 @@ Let's create some objects:
 > df2 <- cbind(z, sinz)
 ```
 
-Notice that we created `y` and `y2` and included these in data frame 1 `df1`. So, now we have the same data/information in 2 places which is redundant. So, we could remove `y` and `y2` since they are now contained inside `df1`. Similarly, we created `z` and `sinz` which are contained inside `df2`. So, let's **clean** up our environment by removing `y`, `y2`, `z`, `sinz`.
+Notice that we created `y` and `y2` and included these in data frame 1 `df1`. So, now we have the same data/information in 2 places which is redundant. So, we could remove `y` and `y2` since they are now contained inside `df1`. Similarly, we created `z` and `sinz` which are contained inside `df2`. So, let's **clean** up our environment by removing `y`, `y2`, `z`, `sinz`. 
+
+Let's list the current list of objects and then remove these and list the objects again.
 
 
 ```r
+> ls()
+```
+
+```
+[1] "df1"  "df2"  "sinz" "x"    "y"    "y2"   "z"   
+```
+
+```r
 > rm(y, y2, z, sinz)
+> ls()
+```
+
+```
+[1] "df1" "df2" "x"  
 ```
 
 You should see that these 4 objects have now been removed from your global environment.
@@ -119,13 +152,23 @@ Then `load()` the data back. Let's load `df2.RData` first and then the complete 
 
 ```r
 > load(file="df2.RData")
+> ls()
 ```
 
-Next the full workspace.
+```
+[1] "df2"
+```
+
+Next the full workspace. NOTE: Ignore the `bib` object shown below which is created as part of this RGitbook.
 
 
 ```r
 > load("workshop2objects.RData")
+> ls()
+```
+
+```
+[1] "bib" "df2" "z"  
 ```
 
 You have now successfully accomplished the following:

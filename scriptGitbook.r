@@ -90,6 +90,12 @@ library(Rgitbook)
 library(knitcitations)
 library(knitr)
 library(xtable)
+# library(rJava)
+# library(xlsx) - has java problems
+# library(gdata) - needs perl
+library(readxl)
+library(foreign)
+rm(list = ls())
 
 # for a bibliography to be added
 # assign it to the global environment first.
@@ -97,6 +103,10 @@ bib <- read.bibtex("mybib.bib")
 
 # clean our cache of previous bibliography
 cleanbib()
+
+# load datasets and other objects referred to within
+# these exercises and such.
+# Dataset_01_comma <- read.csv(file="./datasets/Dataset_01_comma.csv")
 
 # set clean=TRUE to make sure each RMD file gets rebuilt
 # buildRmd(clean=TRUE)

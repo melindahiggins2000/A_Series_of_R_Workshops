@@ -27,7 +27,9 @@ So to change the directory we run the following command (see below). This can al
 While the menu options are handy it is a good idea to include the `setwd()` command into your R script so you document explicitly where you are working and organizing your project files.
 
 ```{r}
+getwd()
 setwd('C:/MyR/2016_Spring_RWorkshops')
+getwd()
 ```
 
 ## Clear your workspace when starting a new project
@@ -36,6 +38,7 @@ It is also a good idea when starting a NEW project for the FIRST time to clear y
 
 ```{r}
 rm(list = ls())
+ls()
 ```
 
 NOTE: You do NOT need to do this every time you open R. It is just a good idea to do it at the beginning of a project. Once you've got a project running and underway, you probably want to pick up where you left off and keep the objects and data elements you've created so far in your global environment. That is OK.
@@ -56,10 +59,14 @@ sinz <- sin(z)
 df2 <- cbind(z, sinz)
 ```
 
-Notice that we created `y` and `y2` and included these in data frame 1 `df1`. So, now we have the same data/information in 2 places which is redundant. So, we could remove `y` and `y2` since they are now contained inside `df1`. Similarly, we created `z` and `sinz` which are contained inside `df2`. So, let's **clean** up our environment by removing `y`, `y2`, `z`, `sinz`.
+Notice that we created `y` and `y2` and included these in data frame 1 `df1`. So, now we have the same data/information in 2 places which is redundant. So, we could remove `y` and `y2` since they are now contained inside `df1`. Similarly, we created `z` and `sinz` which are contained inside `df2`. So, let's **clean** up our environment by removing `y`, `y2`, `z`, `sinz`. 
+
+Let's list the current list of objects and then remove these and list the objects again.
 
 ```{r}
+ls()
 rm(y, y2, z, sinz)
+ls()
 ```
 
 You should see that these 4 objects have now been removed from your global environment.
@@ -105,13 +112,14 @@ Then `load()` the data back. Let's load `df2.RData` first and then the complete 
 
 ```{r}
 load(file="df2.RData")
-
+ls()
 ```
 
-Next the full workspace.
+Next the full workspace. NOTE: Ignore the `bib` object shown below which is created as part of this RGitbook.
 
 ```{r}
 load("workshop2objects.RData")
+ls()
 ```
 
 You have now successfully accomplished the following:
